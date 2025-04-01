@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Bold.woff2') format('woff2'),
+        url('Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-light';
+    src: url('Poppins-Light.woff2') format('woff2'),
+        url('Poppins-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body { 
+    font-family: Arial, sans-serif; 
+    background-image: url(https://cdn.ezo.io/wp-content/uploads/2023/10/What-is-Inventory-Management-Techniques-and-Benefits-.jpg);
+    background-size: cover
+}   
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-family:'Poppins';
+    color: white;
+    
+}   
+.container { 
+     width: 90%; margin: auto;  
+}
+.top-section {
+    display: flex; align-items: flex-start; margin-bottom: 10px; 
+}
+.side-controls { 
+    display: flex; flex-direction: column; gap: 10px; width: 25%; 
+}
+.search-bar { 
+    display: flex; align-items: center; 
+}
+.search-bar input {
+    padding: 5px; margin-right: 5px; width: 60%; 
+}
+.filters { 
+    display: flex; flex-direction: column; gap: 5px; 
+    font-family: 'Poppins-light';
+}
+table {
+     width: 75%; border-collapse: collapse; 
+     color: white;
+     background-color: #6EC1D1;
+}
+th, td { 
+    border: 1px solid white; padding: 8px; text-align: left;
+}
+th {
+    background-color: #1E5470 ; 
+    font-family:'Poppins-light';
+}
+.modal { 
+    display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc;
+}
+        .modal input, .modal select { 
+    display: block; margin-bottom: 10px; width: 100%; 
+}
+.actions { 
+    display: flex; gap: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.sorting {
+    margin-top: 20px;
+    font-family: 'Poppins-light';
+}
+
+.sorting button {
+    background: #1A729C; 
+    border: 2px solid #3C81DA; 
+}
+
+.sorting button:hover {
+    background: #0056b3;
+}
