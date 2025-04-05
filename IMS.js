@@ -8,23 +8,23 @@ function filterItems() {
     });
 }
 
-let editingRow = null; // Global variable to track which row is being edited
+let editingRow = null; 
 
 function editItem(button) {
     let row = button.parentElement.parentElement;
     let cells = row.getElementsByTagName('td');
 
-    // Populate the modal with the existing values
+   
     document.getElementById('itemName').value = cells[0].innerText;
     document.getElementById('itemDetails').value = cells[1].innerText;
     document.getElementById('itemQuantity').value = cells[2].innerText;
     document.getElementById('itemPrice').value = cells[3].innerText;
     document.getElementById('itemType').value = cells[4].innerText;
 
-    // Store reference to the row being edited
+    
     editingRow = row;
 
-    // Open the modal
+   
     openModal();
 }
 
@@ -37,17 +37,17 @@ function addItem() {
     let table = document.getElementById('inventory-body');
 
     if (editingRow) {
-        // Update existing row
+       
         editingRow.cells[0].innerText = name;
         editingRow.cells[1].innerText = details;
         editingRow.cells[2].innerText = quantity;
         editingRow.cells[3].innerText = price;
         editingRow.cells[4].innerText = type;
         
-        // Clear editing state
+        
         editingRow = null;
     } else {
-        // Add new row
+       
         let row = table.insertRow();
         row.innerHTML = `<td>${name}</td><td>${details}</td><td>${quantity}</td><td>${price}</td><td>${type}</td>
             <td>
@@ -65,7 +65,7 @@ function openModal() {
 
 function closeModal() {
     document.getElementById('itemModal').style.display = 'none';
-    editingRow = null; // Reset editing state
+    editingRow = null; 
 }
 
 function sortItems() {
